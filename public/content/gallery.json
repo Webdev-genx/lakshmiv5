@@ -1,0 +1,29 @@
+{
+  "clinic": [
+    {
+      "image": "/uploads/reception.jpeg",
+      "caption": "Reception Area"
+    },
+    {
+      "image": "/uploads/waiting-area.jpeg",
+      "caption": "Comfortable Waiting Area"
+    },
+    {
+      "image": "/uploads/clinic1.jpeg",
+      "caption": "Modern Treatment Room"
+    },
+    {
+      "image": "/uploads/clinic2.jpeg",
+      "caption": "Advanced Dental Equipment"
+    },
+    {
+      "image": "/uploads/doctor.jpeg",
+      "caption": "Expert Dental Care"
+    }
+  ],
+  "results": [{
+      "title": "Root Canal Treatment",
+      "before": "/uploads/rtc-before.png",
+      "after": "/uploads/rtc-after.png"
+    }]
+}

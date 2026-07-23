@@ -1,0 +1,62 @@
+# Decap CMS configuration
+#
+# Editors add or remove gallery images here at /admin.
+# By default this uses the "git-gateway" backend, which works when the site is
+# hosted with Netlify Identity or a compatible git gateway. If you deploy
+# elsewhere, change `backend.name` (for example to `github`) and follow the
+# Decap CMS backend docs.
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images get stored in the repo. They are served from /uploads/*.
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery"
+        label: "Gallery"
+        file: "public/content/gallery.json"
+        format: "json"
+
+        fields:
+          - label: "Clinic Gallery"
+            name: "clinic"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                required: false
+
+          - label: "Treatment Results"
+            name: "results"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Treatment Name"
+                name: "title"
+                widget: "string"
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                required: false
+
+              - label: "Before Image"
+                name: "before"
+                widget: "image"
+
+              - label: "After Image"
+                name: "after"
+                widget: "image"
