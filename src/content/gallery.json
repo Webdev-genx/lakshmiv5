@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "image": "/uploads/gallery-1.jpg",
+      "caption": "Our modern treatment rooms"
+    },
+    {
+      "image": "/uploads/gallery-2.jpg",
+      "caption": "A calming waiting area"
+    },
+    {
+      "image": "/uploads/gallery-3.jpg",
+      "caption": "Clear explanations, every visit"
+    }
+  ]
+}
