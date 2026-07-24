@@ -8,6 +8,17 @@
     <link rel="icon" href="/favicon.png" />
   </head>
   <body>
+    <!-- Netlify Identity: must load and grab any recovery/invite token
+         BEFORE Decap CMS mounts its router, which otherwise rewrites
+         the hash (e.g. #recovery_token=... becomes #/recovery_token=...) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.location.hash && window.location.hash.includes("_token=")) {
+        window.netlifyIdentity.on("init", function () {});
+      }
+    </script>
     <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>  </body>
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
 </html>
+ 
